@@ -24,6 +24,7 @@
     * [Providers](/providers.md)
     * [Events](/events.md)
     * [Globals](/globals.md)
+    * [Errors & Exceptions](/errors.md)
 
 
 * Security

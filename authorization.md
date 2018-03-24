@@ -22,20 +22,23 @@ const app = require('../../../app');
 const Basic = require('lesswork-framework/Authentication/Basic');
 
 module.exports = {
-  auth: function (event, context, callback) {
+  auth: function () {
     app(arguments, function () {
       new Basic().auth('test', 'test');
     });
   },
 
-  config: `AuthenticationBasic:
-    handler: app/Http/Authentication/Basic.auth
-    documentation:
-      description: "Basic Auth Handler"`
+  config: {
+    Authentication<%= name %>Basic: {
+      handler: 'app/Http/Authentication/<%= name %>Basic.auth',
+      documentation: {
+        description: 'Basic Auth.'
+      }
+    }
 };
 ```
 
-## Using a authorizer
+## Using an authorizer
 You can restirct routes with your newly created providers by editing your `app/Http/Routes` file and adding the following to its `config` setting:
 
 ```js

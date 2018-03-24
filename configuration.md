@@ -5,7 +5,7 @@ Create your applications environment file.
 cp .env.example.yml .env.yml
 ```
 
-Here you can define YAML based variables that will be used in your application and `serverless` configuration.
+Here you can define json based variables that will be used in your application and `serverless` configuration.
 
 ### Get Environment Settings
 Environment settings can be accessed from the `env()` helper or the `process.env` object.

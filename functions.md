@@ -24,8 +24,11 @@ module.exports = {
     });
   },
 
-  config: `FunctionHelloWorld:
-    handler: app/Http/Functions/HelloWorldFunction.handle`
+  config: {
+    FunctionHelloWorld: {
+      handler: 'app/Http/Functions/HelloWorldFunction.handle',
+    }
+  }
 };
 ```
 

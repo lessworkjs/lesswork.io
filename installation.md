@@ -3,13 +3,13 @@
 > Node 6 required. Use [n](https://www.npmjs.com/package/n) to switch.
 
 
-## Install using the `lesswork-cli` tool:
+## Install using lesswork-cli:
 ```bash
-npm i -g lesswork-cli
-lesswork new app
+npm i -g serverless with-lesswork
+lesswork new ./app
 ```
 
-Once installed you will be provided directions on how to create a sample route and start your dev server. 
+Once installed you will be provided directions on how to create a sample endpoint and start your dev server. 
 
 
 ## Ready to deploy?

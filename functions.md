@@ -1,13 +1,13 @@
 # Functions
-Functions can be anything that does not require a public route. They can be used in `commands`, on `deploy` or for various other applications.
+Functions are anything that do not require a public route. They can be used in `commands`, on `deploy`, or for various other applications.
 
 These files are `autoloaded` as `functions` in your `serverless` configuration.
 
 ## Create a function
-Functions are created with the `work` command.
+Functions are created with the `lesswork` command.
 
 ```bash
-node work make:function HelloWorld
+lesswork make:function HelloWorld
 ```
 
 This creates the file `app/Http/Functions/HelloWorldFunction.js`.
@@ -18,9 +18,9 @@ This creates the file `app/Http/Functions/HelloWorldFunction.js`.
 const app = require('../../../bootstrap/app');
 
 module.exports = {
-  handle: function (event, context, callback) {
+  handle: function ()) {
     app(arguments, function () {
-      callback(null, 'success');
+      state.callback(null, 'success');
     });
   },
 

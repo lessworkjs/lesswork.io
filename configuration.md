@@ -1,9 +1,6 @@
 # Configuration
 ## Environment
-Create your applications environment file. 
-```bash
-cp .env.example.yml .env.yml
-```
+Your env file is `env.js`.
 
 Here you can define json based variables that will be used in your application and `serverless` configuration.
 
@@ -13,7 +10,7 @@ Environment settings can be accessed from the `env()` helper or the `process.env
 The `env()` helper will allow you to use a default.
 ```js
 env('APP_ENV', 'local');
-// or 
+// is the same as
 process.env.APP_ENV || 'local';
 ```
 

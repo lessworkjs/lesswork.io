@@ -22,7 +22,7 @@ This directory contains your `mocha` tests.
 
 ####  `Console` 
 * Commands
-This directory contains your `work` console commands.
+This directory contains your `lesswork` console commands.
 
 
 ####  `Http`

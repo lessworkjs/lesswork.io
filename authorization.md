@@ -5,11 +5,11 @@ These files are `autoloaded` as `functions` in your `serverless` configuration.
 
 ## Create the authorizer
 
-The default authentication providers are created with the `work` command.
+The default authentication providers are created with the `lesswork` command.
 
 
 ```bash
-node work make:auth
+lesswork make:auth
 ```
 
 This creates the files `app/Http/Authentication/Basic.js` and `app/Http/Authentication/Jwt.js`.
@@ -39,19 +39,26 @@ module.exports = {
 ```
 
 ## Using an authorizer
-You can restirct routes with your newly created providers by editing your `app/Http/Routes` file and adding the following to its `config` setting:
+You can restirct routes with your newly created providers by editing your `app/Http/Routes` file and adding the following to its `config` setting under the `http` `event`.:
 
 ```js
-authorizer: AuthenticationBasic
+config: {
+      ...
+      events: [{
+        http: {
+          ...
+          authorizer: AuthenticationBasic
+        }
+      }]
+    }
+  }
 ```
 
-Example:
+You can also set it with the `defs` property:
 ```js
-...
- - http:
-    path: HelloWorld
-    method: get
-    cors: true
-    authorizer: AuthenticationBasic
-    ...
+defs: {
+  get: {
+    authorizer: ‘AuthenticationBasic’
+  }
+},
 ```

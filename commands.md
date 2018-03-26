@@ -3,11 +3,11 @@ Commands are provided by [adonis-ace](http://adonisjs.com/docs/4.0/ace)
 
 ## Create a command
 
-Commands are created with the `work` command.
+Commands are created with the `lesswork` command.
 
 
 ```bash
-node work make:command HelloWorld
+lesswork make:command HelloWorld
 ```
 
 This creates the file `app/Console/Commands/HelloWorldCommand.js`.
@@ -39,5 +39,5 @@ module.exports = HelloWorldCommands;
 ## Execute a command
 
 ```bash
-node work example:HelloWorld
+lesswork example:HelloWorld
 ```

@@ -5,11 +5,11 @@ These files are `autoloaded` as `functions` in your `serverless` configuration.
 
 ## Create a controller
 
-Controllers are created with the `work` command.
+Controllers are created with the `lesswork` command.
 
 
 ```bash
-node work make:controller HelloWorld
+lesswork make:controller HelloWorld
 ```
 
 This creates the file `app/Http/Controllers/HelloWorldController.js`.
@@ -18,7 +18,7 @@ This creates the file `app/Http/Controllers/HelloWorldController.js`.
 'use strict';
 
 class HelloWorldController extends require('lesswork-framework/Controller') {
-  get() {
+  * get() {
     response.success({
       hello: 'world'
     });

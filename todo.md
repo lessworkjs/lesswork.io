@@ -1,4 +1,7 @@
 # TO-DO
+## jsonapi spec?
+* https://github.com/SeyZ/jsonapi-serializer
+* https://www.npmjs.com/package/jsonapi-mapper 
 
 ## deploy
 * need some stuff to help deploys
@@ -15,11 +18,9 @@
 
 
 ## adonis orm commands
-* implement the seed and migration commands
-
-I tried but the commands are not static, so they fail to load. Would require local clone.
-
-
+* migrate:fresh Drop all tables and re-run all migrations
+* migrate:install Create the migration repository
+* make:migration, seed, etc.
 
 ## mocks
 * testing and stuff..
@@ -32,3 +33,5 @@ I tried but the commands are not static, so they fail to load. Would require loc
 * http://adonisjs.com/docs/3.2/request
 * http://adonisjs.com/docs/3.2/response
 
+## validator 
+* https://adonisjs.com/docs/3.2/validator

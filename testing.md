@@ -5,10 +5,10 @@ This framework uses [mochajs](https://mochajs.org/) to perform the tests.
 
 
 ## Create a test
-Functions are created with the `work` command.
+Functions are created with the `lesswork` command.
 
 ```bash
-node work make:test HelloWorld
+lesswork make:test HelloWorld
 ```
 
 This creates the file `test/HelloWorldTest.js`.

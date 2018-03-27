@@ -9,7 +9,7 @@
     * [Controllers](/controllers.md)
     * [Routes](/routes.md)
     * [Functions](/functions.md)
-
+    * [Authorization](/authorization.md)
 
 * Helpers
     * [App](/app.md)
@@ -18,18 +18,16 @@
     * [Env](/env.md)
     * [Request](/request.md)
     * [Response](/response.md)
+    * [Validation](/validation.md)
 
-* Other   
+* Development 
     * [Commands](/commands.md)
     * [Providers](/providers.md)
     * [Events](/events.md)
     * [Globals](/globals.md)
     * [Errors & Exceptions](/errors.md)
-
-
-* Security
-    * [Authorization](/authorization.md)
-
+    * [Localization](/localization.md)
+    
 * Database
     * [Database](/database.md)
     * [Redis](/redis.md)

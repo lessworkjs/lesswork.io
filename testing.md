@@ -20,7 +20,7 @@ const mochaPlugin = require('serverless-mocha-plugin');
 const expect = mochaPlugin.chai.expect;
 const assert = mochaPlugin.chai.assert;
 
-const Test = require('lesswork-framework/Test');
+const Test = require('lesswork-framework/src/Test');
 
 let wrapped = mochaPlugin.getWrapper('HelloWorld', '/app/Http/Routes/HelloWorldRoute', 'get');
 

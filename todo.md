@@ -45,9 +45,6 @@
 * testing and stuff..
 
 
-## translations 
-* nothing fancy, resources/lang folder like laravel 
-
 ## more functionality 
 * http://adonisjs.com/docs/3.2/request
 * http://adonisjs.com/docs/3.2/response

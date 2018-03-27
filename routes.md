@@ -5,7 +5,7 @@ You are not limited to using this framework since you can define any logic for y
 
 These files are `autoloaded` as `functions` in your `serverless` configuration.
 
-`defs` and `config` are reserved variables. 
+`serverless` is a reserved variable. 
 
 ## Create a route
 
@@ -15,17 +15,17 @@ Routes are created with the `lesswork` command.
 lesswork make:route HelloWorld
 ```
 
-This creates the file `app/Http/Routes/HelloWorldRoute.js`.
+This creates the file `app/Http/Routes/HelloWorld.js`.
 
 ```js
 'use strict';
 
-const app = require('../../../bootstrap/app');
+const Route = require('lesswork-framework/src/Route');
 
 module.exports = {
   get: function () {
-    app(arguments, 'App/Http/Controllers/HelloWorldController@get');
-  }
+    return Route(arguments, 'App/Http/Controllers/HelloWorldController@get');
+  },
 };
 ```
 
@@ -33,36 +33,51 @@ You can define multiple methods per route file.
 ```js
 ...
   get: function () {
-    app(arguments, 'App/Http/Controllers/HelloWorldController@get');
+    return Route(arguments, 'App/Http/Controllers/HelloWorldController@get');
   },
   post: function () {
-    app(arguments, 'App/Http/Controllers/HelloWorldController@post');
+    return Route(arguments, 'App/Http/Controllers/HelloWorldController@post');
   }
 ...
 ```
 
 ## Route Configuration
-You can configure routes in 3 ways. 
+The `Route` function has several options.
 
-### Automatically
-This is the default method for route configruration.
-
-###  With defs
-You can customize the configruration of each method with `defs`:
 ```js
-defs: {
-  get: {
-    authorizer: 'AuthenticationBasic'
-  }
-},
-  ```
+# Callbacks
+Route(arguments, function () {
 
- ###  With config
-  You can define the entire config with the `config` option.
+});
+
+# Define the path manually
+Route(arguments, 'path', 'App/Http/Controllers/HelloWorldController@get');
+
+# Define configuration
+Route(arguments, 'App/Http/Controllers/HelloWorldController@get', {
+  documentation: {
+    description: 'Oh yeah!
+  }
+});
+
+# Define configuration and path
+Route(arguments, 'path', 'App/Http/Controllers/HelloWorldController@get', {
+  documentation: {
+    description: 'Oh yeah!
+  }
+});
+```
+
+
+ ###  Provide your own config
+  You can define the entire config with the `serverless` option.
+
+  This is used for `authentication` and `function` routes.
+
   > Each route will need to be defined.
 
   ```js
-  config: {
+  serverless: {
     HelloWorld: {
       handler: 'app/Http/Routes/HelloWorldRoute.get',
       events: [{

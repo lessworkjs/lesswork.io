@@ -1,11 +1,16 @@
 # Globals
-The following namespaces are registered as global functions that can be used anywhere within the `app` function.
+> WIP 
+
+The following alises are registered as global variables that can be used anywhere within the `app` function.
 
 ```js
-global.app = use('App');
+global.App = use('App');
 global.Helpers = use('Helpers');
-global.config = use('Config');
-global.response = use('Response');
-global.request = use('Request');
-global.state = use('State');
+global.Config = use('Config');
+global.Response = use('Response');
+global.Request = use('Request');
+global.State = use('State');
+global.EXP = use('Exception');
+global.Lintl = use('Lintl');
+global.Env = use('Env');
 ```

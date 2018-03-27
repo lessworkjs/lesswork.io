@@ -1,6 +1,6 @@
 # Thanks
-Thanks to `adonisjs`. Without it this wouldn't be possible.
+Thanks to [adonisjs](https://adonisjs.com/) and [laravel](https://laravel.com/).
 
-Thanks to `laravel`. Without it I wouldn't know what eloquent code looks like.
+Adonis is to Lesswork like Symfony is to Laravel. It is a critical component to this application.
 
-
+Thank you to all the contributors to these great projects.

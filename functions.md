@@ -15,16 +15,16 @@ This creates the file `app/Http/Functions/HelloWorldFunction.js`.
 ```js
 'use strict';
 
-const app = require('../../../bootstrap/app');
+const Route = require('lesswork-framework/src/Route');
 
 module.exports = {
   handle: function ()) {
-    app(arguments, function () {
+    Route(arguments, function () {
       state.callback(null, 'success');
     });
   },
 
-  config: {
+  serverless: {
     FunctionHelloWorld: {
       handler: 'app/Http/Functions/HelloWorldFunction.handle',
     }

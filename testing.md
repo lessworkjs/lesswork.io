@@ -22,7 +22,7 @@ const assert = mochaPlugin.chai.assert;
 
 const Test = require('lesswork-framework/src/Test');
 
-let wrapped = mochaPlugin.getWrapper('HelloWorld', '/app/Http/Routes/HelloWorldRoute', 'get');
+let wrapped = mochaPlugin.getWrapper('HelloWorld', '/app/Http/Routes/HelloWorld', 'get');
 
 describe('HelloWorld', () => {
   before((done) => {

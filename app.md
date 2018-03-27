@@ -1,4 +1,4 @@
-# App
+A# App
 
 Access with the global `app` or injected with `use('App')`.
 
@@ -7,10 +7,10 @@ Access with the global `app` or injected with `use('App')`.
 `environment()`
 
 ```js
-app.environment(); // returns APP_ENV
-app.environment('local'); // boolean if APP_ENV is local
-app.environment(['production', 'staging']); // boolean if any match APP_ENV
-app.environment('production', 'staging'); // same as above
+App.environment(); // returns APP_ENV
+App.environment('local'); // boolean if APP_ENV is local
+App.environment(['production', 'staging']); // boolean if any match APP_ENV
+App.environment('production', 'staging'); // same as above
 ```
 
 
@@ -24,3 +24,10 @@ It supports `generators`.
 ```js
 run('namespace/class@method');
 ```
+
+## locales
+> WIP 
+
+* getLocale
+* setLocale 
+* isLocale

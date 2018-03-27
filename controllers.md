@@ -19,7 +19,7 @@ This creates the file `app/Http/Controllers/HelloWorldController.js`.
 
 class HelloWorldController extends require('lesswork-framework/Controller') {
   * get() {
-    response.success({
+    Response.success({
       hello: 'world'
     });
   }

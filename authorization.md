@@ -19,7 +19,7 @@ This creates the files `app/Http/Authentication/Basic.js` and `app/Http/Authenti
 ```js
 'use strict';
 
-const Kernel = require('lesswork-framework/src/Route/Kernel');
+const Kernel = require('lesswork-framework/src/Kernel');
 
 const Basic = require('lesswork-framework/src/Authentication/Basic');
 

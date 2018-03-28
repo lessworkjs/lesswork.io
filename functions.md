@@ -15,7 +15,7 @@ This creates the file `app/Http/Functions/exampleFunction.js`.
 ```js
 'use strict';
 
-const Kernel = require('lesswork-framework/src/Route/Kernel');
+const Kernel = require('lesswork-framework/src/Kernel');
 
 module.exports = {
   handle: function () {

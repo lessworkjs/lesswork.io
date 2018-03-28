@@ -24,7 +24,7 @@ const Route = require('lesswork-framework/src/Route');
 
 module.exports = {
   get: function () {
-    return Route(arguments, 'App/Http/Controllers/HelloWorldController@get');
+    return Route(arguments).get('helloWorld', 'App/Http/Controllers/HelloWorldController@get');
   },
 };
 ```

@@ -6,18 +6,23 @@
 ## Installing Lesswork
 Lesswork is installed and managed with its own global application.
 
+> Once installed you will be provided directions on how to create a sample endpoint and start your dev server. 
+
 ```bash
 npm i -g serverless with-lesswork
 lesswork new ./app
 ```
 
-Once installed you will be provided directions on how to create a sample endpoint and start your dev server. 
-
 ## Local Development Server
 You can launch your application with `serverless-offline` for local development.
 
 ```js 
-npm run dev
+lesswork serve
+```
+
+## Want to play around instead?
+```js
+lesswork tinker
 ```
 
 ## Ready to deploy?
@@ -31,12 +36,4 @@ aws_secret_access_key=
 When you're ready, deploy! 
 ```bash 
 sls deploy 
-```
-
-## View your routes
-When you run the dev server or deploy you will be provided a list of URLS or routes.
-
-Browse to your `HelloWorld` route and you will see:
-```json
-{"hello":"world"}
 ```

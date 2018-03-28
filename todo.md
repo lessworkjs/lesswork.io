@@ -1,4 +1,7 @@
 # TO-DO
+##
+https://www.npmjs.com/package/collect.js
+
 ## serverless function configs
 * need a proper working config generator
 * better config options

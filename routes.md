@@ -33,35 +33,54 @@ You can define multiple methods per route file.
 ```js
 ...
   get: function () {
-    return Route(arguments, 'App/Http/Controllers/HelloWorldController@get');
+    return Route(arguments).get('helloWorld', 'App/Http/Controllers/HelloWorldController@get');
   },
   post: function () {
-    return Route(arguments, 'App/Http/Controllers/HelloWorldController@post');
+    return Route(arguments).post('helloWorld', 'App/Http/Controllers/HelloWorldController@post');
   }
 ...
 ```
 
-## Route Configuration
-The `Route` function has several options.
+## Route options
+
+### auth
+### middleware 
+
+
+### get 
+### post 
+### put
+### patch
+### delete 
+### options
+### connect
+
+
+
+## Kernel Configuration
+`functions` and `authorizers` use the Kernel command instead of the Route.
+
+
+The `Kernel` function has several options.
 
 ```js
 # Callbacks
-Route(arguments, function () {
+Kernel(arguments, function () {
 
 });
 
 # Define the path manually
-Route(arguments, 'path', 'App/Http/Controllers/HelloWorldController@get');
+Kernel(arguments, 'path', 'App/Http/Controllers/HelloWorldController@get');
 
 # Define configuration
-Route(arguments, 'App/Http/Controllers/HelloWorldController@get', {
+Kernel(arguments, 'App/Http/Controllers/HelloWorldController@get', {
   documentation: {
     description: 'Oh yeah!
   }
 });
 
 # Define configuration and path
-Route(arguments, 'path', 'App/Http/Controllers/HelloWorldController@get', {
+Kernel(arguments, 'path', 'App/Http/Controllers/HelloWorldController@get', {
   documentation: {
     description: 'Oh yeah!
   }

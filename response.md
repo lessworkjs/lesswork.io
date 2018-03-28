@@ -1,5 +1,5 @@
 # Response
-Access with the global `response` or injected with `use('Response')`.
+Access with the global `Response` or injected with `use('Response')`.
 
 ## success
 

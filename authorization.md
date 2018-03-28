@@ -19,32 +19,37 @@ This creates the files `app/Http/Authentication/Basic.js` and `app/Http/Authenti
 ```js
 'use strict';
 
-const Route = require('lesswork-framework/src/Route');
+const Kernel = require('lesswork-framework/src/Route/Kernel');
 
-const Basic = require('lesswork-framework/Authentication/Basic');
+const Basic = require('lesswork-framework/src/Authentication/Basic');
 
 module.exports = {
   auth: function () {
-    return Route(arguments, function () {
+    Kernel(arguments, function () {
       new Basic().auth('test', 'test');
     });
   },
 
   serverless: {
-    Authentication<%= name %>Basic: {
-      handler: 'app/Http/Authentication/<%= name %>Basic.auth',
+    AuthenticationBasic: {
+      handler: 'app/Http/Authentication/Basic.auth',
       documentation: {
         description: 'Basic Auth.'
       }
     }
+  }
 };
 ```
 
 ## Using an authorizer
-You can restirct routes with your newly created providers by editing your `app/Http/Routes` file and adjusting its serverless configuration.
+You can autorize routes with your newly created providers by editing your `routes` file and adjusting its serverless configuration.
 
 ```js
-Route(arguments, 'App/Http/Controllers/HelloWorldController@get', {
-  authorizer: AuthenticationBasic
+...
+return Route(arguments).auth('AuthenticationBasic').get('helloWorld', 'App/Http/Controllers/testController@get');
+# Is the same as
+return Route(arguments).get('helloWorld', 'App/Http/Controllers/testController@get', {
+  authorizer: 'AuthenticationBasic'
 });
+...
 ```

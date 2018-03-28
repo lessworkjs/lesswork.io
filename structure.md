@@ -12,6 +12,9 @@ This directory contains the core off your application. Everything here will be `
 ####  `config`
 This directory contains all of the `javascript` based configuration files.
 
+#### `routes`
+This directory contains all of your routes. You can group routes by creating multiple files.
+
 ####  `test`
 This directory contains your `mocha` tests.
 
@@ -28,7 +31,6 @@ This directory contains your `lesswork` console commands.
 ####  `Http`
 The follow folders are all `autoloaded` as `serverless` functions.
 * Controllers
-* Routes
 * Authentication
 * Functions
 

@@ -1,5 +1,5 @@
 # Request
-Access with the global `request` or injected with `use('Request')`.
+Access with the global `Request` or injected with `use('Request')`.
 
 
 ## allParams

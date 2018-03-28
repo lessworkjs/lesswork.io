@@ -1,6 +1,6 @@
 A# App
 
-Access with the global `app` or injected with `use('App')`.
+Access with the global `App` or injected with `use('App')`.
 
 
 ## environment

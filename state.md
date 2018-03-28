@@ -1,7 +1,7 @@
 # State
 State is used to hold the values provided by serverless when the application starts, `event`, `context`, and `callback`.
 
-Access with the global `state` or injected with `use('State')`.
+Access with the global `State` or injected with `use('State')`.
 
 
 ## callback
@@ -10,7 +10,7 @@ Access with the global `state` or injected with `use('State')`.
 Returns the callback function provided by serverless.
 
 ```js 
-state.callback(null 'success);
+State.callback(null 'success);
 ```
 
 

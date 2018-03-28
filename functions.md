@@ -7,26 +7,26 @@ These files are `autoloaded` as `functions` in your `serverless` configuration.
 Functions are created with the `lesswork` command.
 
 ```bash
-lesswork make:function HelloWorld
+lesswork make:function example
 ```
 
-This creates the file `app/Http/Functions/HelloWorldFunction.js`.
+This creates the file `app/Http/Functions/exampleFunction.js`.
 
 ```js
 'use strict';
 
-const Route = require('lesswork-framework/src/Route');
+const Kernel = require('lesswork-framework/src/Route/Kernel');
 
 module.exports = {
-  handle: function ()) {
-    Route(arguments, function () {
-      state.callback(null, 'success');
+  handle: function () {
+    Kernel(arguments, function () {
+      State.callback(null, 'success');
     });
   },
 
   serverless: {
-    FunctionHelloWorld: {
-      handler: 'app/Http/Functions/HelloWorldFunction.handle',
+    exampleFunction: {
+      handler: 'app/Http/Functions/exampleFunction.handle',
     }
   }
 };
@@ -42,5 +42,5 @@ sls invoke local -f <function>
 
 Example:
 ```bash
-sls invoke local -f FunctionHelloWorld
+sls invoke local -f exampleFunction
 ```

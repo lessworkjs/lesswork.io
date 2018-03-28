@@ -27,3 +27,16 @@ class HelloWorldController extends require('lesswork-framework/Controller') {
 
 module.exports = HelloWorldController;
 ```
+
+You can also use injection...
+```js
+...
+  static get inject() {
+    return ['Response'];
+  }
+
+  constructor(Response) {
+    this.Response = Response;
+  }
+...
+```

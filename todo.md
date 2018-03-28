@@ -1,4 +1,6 @@
 # TO-DO
+## change the process.env shit to use env() since its working
+
 ##
 https://www.npmjs.com/package/collect.js
 

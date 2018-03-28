@@ -1,9 +1,13 @@
 # Response
-Access with the global `Response` or injected with `use('Response')`.
+Access with the globals `Response` and `response`, or injected with `use('Response')`.
 
-## success
+## success([message], [code])
 
-## failure
+## failure([message], [code])
 
-## successOrFailure
+## successOrFailure([message], [code])
+
+
+## Global response
+You can use `response()` as a shortcut to `Response.success()`.
 

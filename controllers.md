@@ -1,8 +1,6 @@
 # Controllers
 Controllers contain the code to be executed by your routes.
 
-These files are `autoloaded` as `functions` in your `serverless` configuration.
-
 ## Create a controller
 
 Controllers are created with the `lesswork` command.
@@ -37,6 +35,36 @@ You can also use injection...
 
   constructor(Response) {
     this.Response = Response;
+  }
+
+  * get() {
+    this.Response.success({
+      hello: 'world'
+    });
+  } 
+...
+```
+
+You can also return to send data to a `Response.success()`.
+
+```js
+...
+  * get() {
+    return {
+      hello: 'world'
+    };
+  }
+...
+```
+
+And with plain ol `response`
+
+```js
+...
+  * get() {
+    response({
+      hello: 'world'
+    });
   }
 ...
 ```

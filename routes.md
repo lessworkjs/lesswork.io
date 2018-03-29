@@ -42,18 +42,63 @@ You can define multiple methods per route file.
 ```
 
 ## Route options
+You can your routes middleware and authorizer.
 
-### auth
-### middleware 
+### auth(authorizer)
+```js 
+Route(arguments).auth('AuthenticationBasic').get(...);
+```
+
+### middleware(middleware)
+The paramater can be a `string` or `array` of `strings`.
+```js 
+Route(arguments).middleware('MyMiddleware').get(...);
+```
 
 
-### get 
-### post 
-### put
-### patch
-### delete 
-### options
-### connect
+### Route(arguments).method(path, callback, options = {})
+`path` is the route you will access, ie: / or /welcome.
+
+`callback` can be named based, a function, or required.
+
+`options` changes your serverless `events[0].http` configuration.
+
+#### The following methods are supported:
+
+#### get 
+```js 
+Route(arguments).get(...);
+```
+
+#### post
+```js 
+Route(arguments).post(...);
+```
+
+#### put
+```js 
+Route(arguments).put(...);
+```
+
+#### patch
+```js 
+Route(arguments).patch(...);
+```
+
+#### delete
+```js 
+Route(arguments).delete(...);
+```
+
+#### options
+```js 
+Route(arguments).options(...);
+```
+
+#### connect
+```js 
+Route(arguments).connect(...);
+```
 
 
 

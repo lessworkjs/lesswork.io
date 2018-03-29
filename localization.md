@@ -19,10 +19,12 @@ module.exports = {
 ```js 
 __('message.welcome');
 
-# Is the same as
+# is the same as
+
 trans('message.welcome');
 
-# Is the same as
+# is the same as
+
 const Lintl = use('Lintl');
 const translated = Lintl.translate('message.welcome');
 ```
@@ -45,7 +47,8 @@ numberFormat(123, {
       currency: 'EUR'
 });
 
-# Is the same as 
+# is the same as 
+
 const Lintl = use('Lintl');
 Lintl.numberFormat(123, {
     style: 'currency',
@@ -59,7 +62,8 @@ You can format dates with [int dateFormat](https://developer.mozilla.org/en-US/d
 ```js
 const date = dateFormat(new Date());
 
-# Is the same as 
+# is the same as
+
 const Lintl = use('Lintl');
 Lintl.dateFormat(new Date());
 ```

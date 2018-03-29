@@ -8,7 +8,9 @@ Access with the global variable `Env` or  with `use('Env')`.
 ## Env 
 ```js
 Env.get('APP_ENV');
-# Is the same as 
+
+# is the same as 
+
 use('Env').get('APP_ENV');
 ```
 

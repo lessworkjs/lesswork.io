@@ -7,10 +7,12 @@ Access with the global `State` or injected with `use('State')`.
 ## callback
 `callback()`
 
+> Your application may continue running after, please use `Response` instead.
+
 Returns the callback function provided by serverless.
 
 ```js 
-State.callback(null 'success);
+State.callback(null 'success');
 ```
 
 
@@ -24,7 +26,7 @@ If hash is provided and part of the event it will be returned.
 If hash is `body` an object will be returned.
 
 ## context
-`context(hash)`
+`context([hash])`
 
 Returns the context object.
 

@@ -1,4 +1,4 @@
-A# App
+# App
 
 Access with the global `App` or injected with `use('App')`.
 
@@ -26,8 +26,28 @@ run('namespace/class@method');
 ```
 
 ## locales
-> WIP 
+App locale settings adjust your applications localization. 
+ 
 
-* getLocale
-* setLocale 
-* isLocale
+### getLocale()
+Get the apps locale.
+
+```js
+console.log(App.getLocale());
+// en-US
+```
+
+### setLocale(locale)
+Change the apps locale.
+
+```js
+App.setLocal('en-ES');
+```
+
+### isLocale(locale)
+Check to see the apps locale matches the paramater.
+
+```js
+App.isLocale('en-ES');
+// true
+```

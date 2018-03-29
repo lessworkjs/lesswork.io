@@ -10,9 +10,13 @@ Environment settings can be accessed from the `env()` helper or the `process.env
 The `env()` helper will allow you to use a default.
 ```js
 env('APP_ENV', 'local');
-# Is the same as
-Env.get('APP_ENV', 'local');
+
 # is the same as
+
+Env.get('APP_ENV', 'local');
+
+# is the same as
+
 process.env.APP_ENV || 'local';
 ```
 
@@ -32,6 +36,8 @@ These are javascript based configuration files and can be accessed from the `con
 
 ```js
 config('database.connection', 'default');
-# Is the same as
+
+# is the same as
+
 Config.get('database.connection', 'default');
 ```

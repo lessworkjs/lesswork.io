@@ -25,7 +25,7 @@ const Basic = require('lesswork-framework/src/Authentication/Basic');
 
 module.exports = {
   auth: function () {
-    Kernel(arguments, function () {
+    return new Kernel(arguments).handle(function () {
       new Basic().auth('test', 'test');
     });
   },

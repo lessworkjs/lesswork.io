@@ -3,6 +3,17 @@ Tests are located in the `test` folder.
 
 This framework uses [mochajs](https://mochajs.org/) to perform the tests. 
 
+> You can use any testing framework you want.
+
+
+## Debugging Errors 
+> WIP
+
+Enable error reporting with the following:
+```
+export DEBUG=adonis:framework
+```
+
 
 ## Create a test
 Functions are created with the `lesswork` command.

@@ -24,7 +24,7 @@ const Route = require('lesswork-framework/src/Route');
 
 module.exports = {
   get: function () {
-    return Route(arguments).get('helloWorld', 'App/Http/Controllers/HelloWorldController@get');
+    return new Route(arguments).get('helloWorld', 'App/Http/Controllers/HelloWorldController@get');
   },
 };
 ```
@@ -33,10 +33,10 @@ You can define multiple methods per route file.
 ```js
 ...
   get: function () {
-    return Route(arguments).get('helloWorld', 'App/Http/Controllers/HelloWorldController@get');
+    return new Route(arguments).get('helloWorld', 'App/Http/Controllers/HelloWorldController@get');
   },
   post: function () {
-    return Route(arguments).post('helloWorld', 'App/Http/Controllers/HelloWorldController@post');
+    return new Route(arguments).post('helloWorld', 'App/Http/Controllers/HelloWorldController@post');
   }
 ...
 ```
@@ -110,22 +110,22 @@ The `Kernel` function has several options.
 
 ```js
 # Callbacks
-Kernel(arguments, function () {
+Kernel(arguments).handle(function () {
 
 });
 
 # Define the path manually
-Kernel(arguments, 'path', 'App/Http/Controllers/HelloWorldController@get');
+Kernel(arguments).handle('path', 'App/Http/Controllers/HelloWorldController@get');
 
 # Define configuration
-Kernel(arguments, 'App/Http/Controllers/HelloWorldController@get', {
+Kernel(arguments).handle('App/Http/Controllers/HelloWorldController@get', {
   documentation: {
     description: 'Oh yeah!
   }
 });
 
 # Define configuration and path
-Kernel(arguments, 'path', 'App/Http/Controllers/HelloWorldController@get', {
+Kernel(arguments).handle('path', 'App/Http/Controllers/HelloWorldController@get', {
   documentation: {
     description: 'Oh yeah!
   }

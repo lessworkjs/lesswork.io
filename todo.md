@@ -1,23 +1,12 @@
 # TO-DO
-## change the process.env shit to use env() since its working
-
-##
-https://www.npmjs.com/package/collect.js
-
-## serverless function configs
-* need a proper working config generator
-* better config options
-* remove need for `def`
-* allow all config stuff to be optional and fill in required
-* provide docs on default but make them optional globally
 
 
 ## cache 
-* for work
-* manager method, session driver and redis driver 
-* set/get, whatever, if session, just set to that function 
+* adonis-cache@0.2.1 
+* readme in npm repo 
 
 ## jsonapi spec?
+* more or less offer some transformation
 * https://github.com/SeyZ/jsonapi-serializer
 * https://www.npmjs.com/package/jsonapi-mapper 
 
@@ -42,9 +31,7 @@ https://www.npmjs.com/package/collect.js
 ** https://github.com/adonisjs/adonis-commands/blob/develop/src/Generators/Migration.js
 ** pretty much same stuff, add params, add date 
 
-## maintenance mode
-* down Put the application into maintenance mode
-* up Bring the application out of maintenance mode
+
 
 ## mocks
 * testing and stuff..

@@ -24,7 +24,7 @@ const Route = require('lesswork-framework/src/Route');
 
 module.exports = {
   get: function () {
-    return new Route(arguments).get('helloWorld', 'App/Http/Controllers/HelloWorldController@get');
+    return new Route(arguments).get('helloWorld', 'App/Http/Controllers/HelloWorldController@get').handle();
   },
 };
 ```
@@ -33,10 +33,10 @@ You can define multiple methods per route file.
 ```js
 ...
   get: function () {
-    return new Route(arguments).get('helloWorld', 'App/Http/Controllers/HelloWorldController@get');
+    return new Route(arguments).get('helloWorld', 'App/Http/Controllers/HelloWorldController@get').handle();
   },
   post: function () {
-    return new Route(arguments).post('helloWorld', 'App/Http/Controllers/HelloWorldController@post');
+    return new Route(arguments).post('helloWorld', 'App/Http/Controllers/HelloWorldController@post').handle();
   }
 ...
 ```
@@ -57,7 +57,7 @@ Route(arguments).middleware('MyMiddleware').get(...);
 
 
 ### Route(arguments).method(path, callback, options = {})
-`path` is the route you will access, ie: / or /welcome.
+`path` is the route you will access.
 
 `callback` can be named based, a function, or required.
 
@@ -67,37 +67,37 @@ Route(arguments).middleware('MyMiddleware').get(...);
 
 #### get 
 ```js 
-Route(arguments).get(...);
+Route(arguments).get(...).handle();
 ```
 
 #### post
 ```js 
-Route(arguments).post(...);
+Route(arguments).post(...).handle();
 ```
 
 #### put
 ```js 
-Route(arguments).put(...);
+Route(arguments).put(...).handle();
 ```
 
 #### patch
 ```js 
-Route(arguments).patch(...);
+Route(arguments).patch(...).handle();
 ```
 
 #### delete
 ```js 
-Route(arguments).delete(...);
+Route(arguments).delete(...).handle();
 ```
 
 #### options
 ```js 
-Route(arguments).options(...);
+Route(arguments).options(...).handle();
 ```
 
 #### connect
 ```js 
-Route(arguments).connect(...);
+Route(arguments).connect(...).handle();
 ```
 
 

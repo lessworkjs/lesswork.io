@@ -46,7 +46,7 @@ You can autorize routes with your newly created providers by editing your `route
 
 ```js
 ...
-return Route(arguments).auth('AuthenticationBasic').get('helloWorld', 'App/Http/Controllers/testController@get');
+return Route(arguments).get('helloWorld', 'App/Http/Controllers/testController@get').auth('AuthenticationBasic').handle();
 
 
 # is the same as
@@ -54,6 +54,6 @@ return Route(arguments).auth('AuthenticationBasic').get('helloWorld', 'App/Http/
 
 return Route(arguments).get('helloWorld', 'App/Http/Controllers/testController@get', {
   authorizer: 'AuthenticationBasic'
-});
+}).handle();
 ...
 ```

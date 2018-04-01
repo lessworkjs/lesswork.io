@@ -44,19 +44,59 @@ You can define multiple methods per route file.
 ## Route options
 You can your routes middleware and authorizer.
 
-### auth(authorizer)
+### auth(string)
+Define the authorizer.
 ```js 
-Route(arguments).auth('AuthenticationBasic').get(...);
+Route(arguments).auth('AuthenticationBasic').get(...).handle();
 ```
 
 ### middleware(middleware)
 The paramater can be a `string` or `array` of `strings`.
 ```js 
-Route(arguments).middleware('MyMiddleware').get(...);
+Route(arguments).middleware('MyMiddleware').get(...).handle();
 ```
 
 
+## Documentation options
+### docs(object)
+Define the entire documentation object.
+```js 
+Route(arguments).docs({
+  description: 'My api rocks!',
+  tags: ['tag'],
+  ...
+}).get(...).handle();
+```
+
+### description(string)
+Define the documentation description.
+```js 
+Route(arguments).description('My api rocks!').get(...).handle();
+```
+
+### requestModels(string|object)
+Define the `requestModels` required for the route, if string `application/json` will be used.
+```js 
+Route(arguments).requestModels([ 'application/json': 'myRequestModel']).get(...).handle();
+```
+
+
+### methodResponses(string|object)
+Define the `methodResponses` that the route uses.
+```js 
+Route(arguments).methodResponses([ 
+  '${self:custom.commonModelSchemaFragments.MethodResponse500Json}',
+  '${self:custom.commonModelSchemaFragments.MethodResponse400Json}',  
+]).get(...).handle();
+```
+
+
+### tags(string|object)
+Define the tags to be used.
+
 ### Route(arguments).method(path, callback, options = {})
+> `.handle()` is required at the end to trigger the route. 
+
 `path` is the route you will access.
 
 `callback` can be named based, a function, or required.

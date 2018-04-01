@@ -47,13 +47,13 @@ You can your routes middleware and authorizer.
 ### auth(string)
 Define the authorizer.
 ```js 
-Route(arguments).auth('AuthenticationBasic').get(...).handle();
+Route(arguments).get(...).auth('AuthenticationBasic').handle();
 ```
 
 ### middleware(middleware)
 The paramater can be a `string` or `array` of `strings`.
 ```js 
-Route(arguments).middleware('MyMiddleware').get(...).handle();
+Route(arguments).get(...).middleware('MyMiddleware').handle();
 ```
 
 
@@ -61,33 +61,33 @@ Route(arguments).middleware('MyMiddleware').get(...).handle();
 ### docs(object)
 Define the entire documentation object.
 ```js 
-Route(arguments).docs({
+Route(arguments).get(...).docs({
   description: 'My api rocks!',
   tags: ['tag'],
   ...
-}).get(...).handle();
+}).handle();
 ```
 
 ### description(string)
 Define the documentation description.
 ```js 
-Route(arguments).description('My api rocks!').get(...).handle();
+Route(arguments).get(...).description('My api rocks!').handle();
 ```
 
 ### requestModels(string|object)
 Define the `requestModels` required for the route, if string `application/json` will be used.
 ```js 
-Route(arguments).requestModels([ 'application/json': 'myRequestModel']).get(...).handle();
+Route(arguments).get(...).requestModels([ 'application/json': 'myRequestModel']).handle();
 ```
 
 
 ### methodResponses(string|object)
 Define the `methodResponses` that the route uses.
 ```js 
-Route(arguments).methodResponses([ 
+Route(arguments).get(...).methodResponses([ 
   '${self:custom.commonModelSchemaFragments.MethodResponse500Json}',
   '${self:custom.commonModelSchemaFragments.MethodResponse400Json}',  
-]).get(...).handle();
+]).handle();
 ```
 
 

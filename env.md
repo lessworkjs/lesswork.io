@@ -1,7 +1,7 @@
 # Env
 > WORK IN PROGRESS
 
-Env is provided by [adonis config](http://adonisjs.com/docs/4.0/configuration-and-env)
+Env is provided by [adonis config](https://adonisjs.com/docs/4.1/configuration-and-env)
 
 Access with the global variable `Env` or  with `use('Env')`.
 

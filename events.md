@@ -1,5 +1,5 @@
 # Events
-This feature is provided by [adonis events](https://adonisjs.com/docs/3.2/events)
+This feature is provided by [adonis events](https://adonisjs.com/docs/4.1/events)
 
 ## Create a listener
 

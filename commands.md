@@ -14,8 +14,8 @@ This creates the file `app/Console/Commands/HelloWorldCommand.js`.
 
 ```js
 const {
-  Command
-} = require('lesswork-cmd');
+  Command,
+} = require('@adonisjs/ace');
 
 class HelloWorldCommands extends Command {
 

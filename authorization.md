@@ -17,8 +17,6 @@ lesswork make:auth
 This creates the files `app/Http/Authentication/Basic.js` and `app/Http/Authentication/Jwt.js`.
 
 ```js
-'use strict';
-
 const Kernel = require('lesswork-framework/src/Kernel');
 
 const Basic = require('lesswork-framework/src/Authentication/Basic');

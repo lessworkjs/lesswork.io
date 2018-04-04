@@ -1,6 +1,6 @@
 # Installation
 
-> Node 6 is required. Use [n](https://www.npmjs.com/package/n) to switch.
+> Node 8.10 is required. Use [n](https://www.npmjs.com/package/n) to switch.
 
 
 ## Installing Lesswork

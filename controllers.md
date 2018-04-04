@@ -16,7 +16,7 @@ This creates the file `app/Http/Controllers/HelloWorldController.js`.
 'use strict';
 
 class HelloWorldController extends require('lesswork-framework/Controller') {
-  * get() {
+  get() {
     Response.success({
       hello: 'world'
     });
@@ -37,7 +37,7 @@ You can also use injection...
     this.Response = Response;
   }
 
-  * get() {
+  get() {
     this.Response.success({
       hello: 'world'
     });
@@ -49,7 +49,7 @@ You can also return to send data to a `Response.success()`.
 
 ```js
 ...
-  * get() {
+  get() {
     return {
       hello: 'world'
     };
@@ -61,7 +61,7 @@ And with plain ol `response`
 
 ```js
 ...
-  * get() {
+  get() {
     response({
       hello: 'world'
     });

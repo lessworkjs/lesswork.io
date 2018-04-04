@@ -10,11 +10,9 @@ More information from the [adonis docs](https://adonisjs.com/docs/3.2/ioc-contai
 Make a provider in `app/Providers`
 
 ```js
-'use strict';
-
 const {
   ServiceProvider
-} = require('adonis-fold');
+} = require('@adonisjs/fold');
 
 class RequestProvider extends ServiceProvider {
   /**
@@ -25,7 +23,7 @@ class RequestProvider extends ServiceProvider {
    *
    * @return {void}
    */
-  * register() {
+  register() {
     this.app.bind('Lesswork/Request', function (app) {
       const Request = require('../Request');
 

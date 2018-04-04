@@ -18,8 +18,6 @@ lesswork make:route HelloWorld
 This creates the file `app/Http/Routes/HelloWorld.js`.
 
 ```js
-'use strict';
-
 const Route = require('lesswork-framework/src/Route');
 
 module.exports = {

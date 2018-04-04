@@ -1,5 +1,7 @@
 # Errors & Exceptions
-This feature is provided by [adonis errors](https://adonisjs.com/docs/3.2/error-and-exceptions) that uses [node-exceptions](https://www.npmjs.com/package/node-exceptions).
+> WIP: needs updating for node 8 version.
+
+This feature is provided by [adonis exceptions](https://adonisjs.com/docs/4.1/exceptions) that uses [node-exceptions](https://www.npmjs.com/package/node-exceptions).
 
 Throw a new exception:
 ```js

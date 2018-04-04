@@ -1,25 +1,24 @@
 # Database
 > WIP
 
-The default ORM is provided by [adonis-lucid](http://adonisjs.com/docs/3.2/lucid).
+The default ORM is provided by [adonis lucid](https://adonisjs.com/docs/4.1/lucid), [repo](https://github.com/adonisjs/adonis-lucid).
 
+# MySQL 
+> We recommend DyanmoDB!
+
+You may have connection issues with MySQL and other similar databases.  
 
 ## Installation
-Install `lesswork-lucid`
+
 ```bash 
-npm install lesswork-lucid --save
+npm install @adonisjs/lucid
 ```
 
 Edit `config/app.js` and in your `providers` object add the following:
 ```js 
 const providers = [
   ...
-  'lesswork-lucid/providers/DatabaseProvider',
-  'lesswork-lucid/providers/LucidProvider',
-  'lesswork-lucid/providers/SchemaProvider',
-  'lesswork-lucid/providers/SeederProvider',
-  'lesswork-lucid/providers/MigrationsProvider',
-  'lesswork-lucid/providers/FactoryProvider'
+  '@adonisjs/lucid/providers/LucidProvider',
 ];
 ```
 
@@ -28,30 +27,22 @@ In your `commands` object add the following:
 ```js
 const commands = {
   ...
-  'Refresh': 'lesswork-lucid/src/Commands/Refresh',
-  'Reset': 'lesswork-lucid/src/Commands/Reset',
-  'Rollback': 'lesswork-lucid/src/Commands/Rollback',
-  'Run': 'lesswork-lucid/src/Commands/Run',
-  'Seed': 'lesswork-lucid/src/Commands/Seed',
-  'Status': 'lesswork-lucid/src/Commands/Status',
+  'Refresh': '@adonisjs/lucid/src/Commands/MigrationRefresh',
+  'Reset': '@adonisjs/lucid/src/Commands/MigrationReset',
+  'Rollback': '@adonisjs/lucid/src/Commands/MigrationRollback',
+  'Run': '@adonisjs/lucid/src/Commands/MigrationRun',
+  'Seed': '@adonisjs/lucid/src/Commands/Seed',
+  'Status': '@adonisjs/lucid/src/Commands/MigrationStatus',
 };
 ```
 
-In your `alises` object add the following:
-```js 
-const aliases = {
-  ...
-  Factory: 'Adonis/Src/Factory',
-  Database: 'Adonis/Src/Database',
-  Model: 'Adonis/Src/Lucid',
-};
-```
+
 
 In your `workProviders` object add the following:
 ```js 
-const workProviders = [
+const  = [
   ...
-  'lesswork-lucid/providers/CommandsProvider',
+  '@adonisjs/lucid/providers/MigrationsProvider',
 ];
 ```
 
@@ -93,7 +84,7 @@ Now you can `use` it in your controllers:
 
 
 ```js 
-* get() {
+ get() {
     const User = use('App/Models/User')
 
     const users = yield User.all();
@@ -110,7 +101,7 @@ View the [adonis lucid docs](https://adonisjs.com/docs/3.2/lucid)
 
 Lessworks migration command names are under the `migrate` namespace to match Laravels.
 
-View the [adonis migration docs](https://adonisjs.com/docs/3.2/migrations)
+View the [adonis migration docs](https://adonisjs.com/docs/4.1/migrations)
 
 ## Seeds & Factories 
 > WIP 
@@ -134,4 +125,4 @@ Factory.blueprint('App/Model/User', (fake) => {
 
 
 
-View the [adonis seeds and factories docs](https://adonisjs.com/docs/3.2/seeds-and-factories)
+View the [adonis seeds and factories docs](https://adonisjs.com/docs/4.1/seeds-and-factories)

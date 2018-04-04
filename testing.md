@@ -25,8 +25,6 @@ lesswork make:test HelloWorld
 This creates the file `test/HelloWorldTest.js`.
 
 ```js
-'use strict';
-
 const mochaPlugin = require('serverless-mocha-plugin');
 const expect = mochaPlugin.chai.expect;
 const assert = mochaPlugin.chai.assert;

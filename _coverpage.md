@@ -21,4 +21,4 @@ lesswork new app
 [docs](/installation)
 
 
-![color](#f0f0f0)
+![color](#ffffff)

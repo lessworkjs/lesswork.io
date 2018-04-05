@@ -16,7 +16,7 @@ Lesswork is installed and managed with its own global application.
 
 ```bash
 npm i -g serverless with-lesswork
-lesswork new ./app
+lesswork new app
 ```
 
 ## Local Development Server

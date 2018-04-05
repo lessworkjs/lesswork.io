@@ -1,11 +1,37 @@
 # Errors & Exceptions
-> WIP: needs updating for node 8 version.
 
-This feature is provided by [adonis exceptions](https://adonisjs.com/docs/4.1/exceptions) that uses [node-exceptions](https://www.npmjs.com/package/node-exceptions).
+## Generic Exceptions
+This feature uses [adonis-generic-exceptions](https://github.com/adonisjs/adonis-generic-exceptions).
 
 Throw a new exception:
 ```js
-throw new EXP.HttpException('Page not found', 404);
+const { InvalidArgumentException } = require('@adonisjs/generic-exceptions')
+
+const message = 'Model.create requires an object'
+const status = 400
+const code = 'E_INVALID_ARGUMENT'
+
+throw new InvalidArgumentException(message, status, code)
+```
+
+## Custom exceptions
+Create `app/Exceptions/CustomException.js`
+
+```js
+const GE = require('@adonisjs/generic-exceptions')
+
+class CustomException extends GE.LogicalException {
+}
+
+module.exports = CustomException
+```
+
+Use it
+
+```js
+const CustomException = use('App/Exceptions/CustomException')
+
+throw new CustomException(message, status, code)
 ```
 
 

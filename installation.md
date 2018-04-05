@@ -1,9 +1,15 @@
 # Installation
 
-> Node 8.10 is required. Use [n](https://www.npmjs.com/package/n) to switch.
+> Node 8.10 is required. 
+
+Download & install [node](https://nodejs.org/en/download/) then use [n](https://www.npmjs.com/package/n) to switch between versions.
+```bash
+npm i n -g
+n 8.10
+```
 
 
-## Installing Lesswork
+## Install Lesswork
 Lesswork is installed and managed with its own global application.
 
 > Once installed you will be provided directions on how to create a sample endpoint and start your dev server. 
@@ -14,14 +20,14 @@ lesswork new ./app
 ```
 
 ## Local Development Server
-You can launch your application with `serverless-offline` for local development.
+You can launch your application with [serverless-offline](https://www.npmjs.com/package/serverless-offline) for local development.
 
 ```js 
 lesswork serve
 ```
 
 ## Playing Around
-Use the included `repl` terminal to play around.
+Use the included [repl](https://nodejs.org/api/repl.html) terminal to play around.
 
 ```js
 lesswork tinker

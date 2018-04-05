@@ -13,8 +13,6 @@ lesswork make:controller HelloWorld
 This creates the file `app/Http/Controllers/HelloWorldController.js`.
 
 ```js
-'use strict';
-
 class HelloWorldController extends require('lesswork-framework/Controller') {
   get() {
     Response.success({

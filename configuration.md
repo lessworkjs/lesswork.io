@@ -1,8 +1,8 @@
 # Configuration
 ## Environment
-Your env file is `env.js`.
+Your env file is `.env`.
 
-Here you can define json based variables that will be used in your application and `serverless` configuration.
+Here you can define variables that will be used in your application and `serverless` configuration.
 
 ### Get Environment Settings
 Environment settings can be accessed from the `env()` helper or the `process.env` object.

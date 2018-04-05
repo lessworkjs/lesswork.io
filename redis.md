@@ -22,7 +22,7 @@ The redis configuration is located in `config/redis.js`.
 Once installed you can use `redis` with the `use` command.
 
 ```js
-class HelloWorldController extends require('lesswork-framework/Controller') {
+class HelloWorldController extends require('@lessworkjs/framework/Controller') {
   constructor() {
     this.redis = use('Redis');
   }

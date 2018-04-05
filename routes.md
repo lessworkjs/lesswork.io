@@ -18,7 +18,7 @@ lesswork make:route HelloWorld
 This creates the file `app/Http/Routes/HelloWorld.js`.
 
 ```js
-const Route = require('lesswork-framework/src/Route');
+const Route = require('@lessworkjs/framework/src/Route');
 
 module.exports = {
   get: function () {

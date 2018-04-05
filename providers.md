@@ -37,7 +37,7 @@ module.exports = RequestProvider;
 
 Register the new provider in `config/app.js` in the `providers` object:
 ```js
-'lesswork-framework/Providers/RequestProvider',
+'@lessworkjs/framework/Providers/RequestProvider',
 ```
 
 And optional `aliases` object:
